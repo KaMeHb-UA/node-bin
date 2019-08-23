@@ -1,42 +1,83 @@
 {
     "@repos": {
-        "node@10.16.3": {
-            "version": "10.16.3",
+        "node": {
             "format": "tar.xz",
             "repo": "https://nodejs.org/download/release"
         },
-        "node@10.16.3-win": {
-            "@inherit": "node@10.16.3",
+        "node-win": {
+            "@inherit": "node",
             "format": "7z"
+        },
+        "github/KaMeHb-UA": {
+            "@inherit": "node",
+            "repo": "https://github.com/KaMeHb-UA/node-bin/releases/download"
         }
     },
     "linux": {
-        "x64": "node@10.16.3",
-        "x86": {
-            "version": "10.16.1",
-            "format": "tar.xz",
-            "repo": "https://github.com/KaMeHb-UA/node-bin/releases/download"
-        },
-        "s390x": "node@10.16.3",
-        "ppc64le": "node@10.16.3",
-        "armv7l": "node@10.16.3",
-        "armv6l": "node@10.16.3",
-        "arm64": "node@10.16.3"
+        "10": {
+            "16": {
+                "1": {
+                    "x86": "github/KaMeHb-UA"
+                },
+                "3": {
+                    "x64": "node",
+                    "s390x": "node",
+                    "ppc64le": "node",
+                    "armv7l": "node",
+                    "armv6l": "node",
+                    "arm64": "node"
+                }
+            }
+        }
+    },
+    "android": {
+        "10": {
+            "16": {
+                "2": {
+                    "armv7l": "github/KaMeHb-UA",
+                    "arm64": "github/KaMeHb-UA"
+                }
+            }
+        }
     },
     "darwin": {
-        "x64": "node@10.16.3"
+        "10": {
+            "16": {
+                "3": {
+                    "x64": "node"
+                }
+            }
+        }
     },
     "aix": {
-        "ppc64": {
-            "@inherit": "node@10.16.3",
-            "format": "tar.gz"
+        "10": {
+            "16": {
+                "3": {
+                    "ppc64": {
+                        "@inherit": "node",
+                        "format": "tar.gz"
+                    }
+                }
+            }
         }
     },
     "sunos": {
-        "x64": "node@10.16.3"
+        "10": {
+            "16": {
+                "3": {
+                    "x64": "node"
+                }
+            }
+        }
     },
     "win": {
-        "x64": "node@10.16.3-win",
-        "x86": "node@10.16.3-win"
+        "10": {
+            "16": {
+                "3": {
+                    "x64": "node@win",
+                    "x86": "node@win"
+                }
+            }
+        }
     }
 }
