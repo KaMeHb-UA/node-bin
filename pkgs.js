@@ -30,3 +30,5 @@ for(var release in pkgs){
         }
     }
 }
+
+module.exports = pkgs

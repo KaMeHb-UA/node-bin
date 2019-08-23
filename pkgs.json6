@@ -4,7 +4,7 @@
             format: "tar.xz",
             repo: "https://nodejs.org/download/release"
         },
-        "node-win": {
+        "node@win": {
             "@inherit": "node",
             format: "7z"
         },
