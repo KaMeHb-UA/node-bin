@@ -3,5 +3,8 @@
     "version": "10.16",
     "scripts": {
         "preinstall": "echo 1"
+    },
+    "dependencies": {
+        "json-6": "^1.0.2"
     }
 }
