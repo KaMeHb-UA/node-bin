@@ -54,4 +54,14 @@
             },
         }
     },
+    12: {
+        4: {
+            0: {
+                android: {
+                    armv7l: "github/KaMeHb-UA",
+                    arm64: "github/KaMeHb-UA",
+                },
+            },
+        },
+    },
 }
