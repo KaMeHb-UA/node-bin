@@ -1,25 +1,45 @@
-declare const PlatformDefinition : {
+type PlatformDefinition = {
     arch: 'armv6l'
         | 'armv7l'
         | 'arm64'
         | 'mips'
         | 'mipsel'
         | 'ppc'
-        | 'ppc64'
         | 'ppc64le'
         | 's390'
         | 's390x'
         | 'x86'
         | 'x64'
 
-    os:   'aix'
-        | 'android'
-        | 'darwin'
-        | 'freebsd'
+    os:   'freebsd'
         | 'linux'
         | 'openbsd'
         | 'sunos'
-        | 'win'
+} | {
+    os:   'js'
+    arch: 'wasm'
+} | {
+    os:   'darwin'
+    arch: 'x64'
+} | {
+    os:   'win'
+    arch: 'x64'
+        | 'x86'
+} | {
+    os:   'aix'
+    arch: 'ppc64'
+} | {
+    os:   'android'
+    arch: 'x64'
+        | 'x86'
+        | 'armv6l'
+        | 'armv7l'
+        | 'arm64'
 }
 
-export = PlatformDefinition
+function platformDefinition(platform?: {
+    os?: string
+    arch?: string
+}): PlatformDefinition
+
+export = platformDefinition
