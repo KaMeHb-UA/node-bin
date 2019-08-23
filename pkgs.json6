@@ -1,0 +1,57 @@
+{
+    "@repos": {
+        node: {
+            format: "tar.xz",
+            repo: "https://nodejs.org/download/release"
+        },
+        "node-win": {
+            "@inherit": "node",
+            format: "7z"
+        },
+        "github/KaMeHb-UA": {
+            "@inherit": "node",
+            repo: "https://github.com/KaMeHb-UA/node-bin/releases/download"
+        },
+    },
+    10: {
+        16: {
+            1: {
+                linux: {
+                    x86: "github/KaMeHb-UA",
+                },
+            },
+            2: {
+                "android": {
+                    armv7l: "github/KaMeHb-UA",
+                    arm64: "github/KaMeHb-UA",
+                },
+            },
+            3: {
+                linux: {
+                    x64: "node",
+                    s390x: "node",
+                    ppc64le: "node",
+                    armv7l: "node",
+                    armv6l: "node",
+                    arm64: "node",
+                },
+                darwin: {
+                    x64: "node",
+                },
+                aix: {
+                    ppc64: {
+                        "@inherit": "node",
+                        format: "tar.gz"
+                    },
+                },
+                sunos: {
+                    x64: "node",
+                },
+                win: {
+                    x64: "node@win",
+                    x86: "node@win",
+                },
+            },
+        }
+    },
+}

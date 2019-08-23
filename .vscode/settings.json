@@ -1,0 +1,5 @@
+{
+    "files.associations": {
+        "*.json6": "json5" // 🤷🏻‍♂️
+    }
+}
