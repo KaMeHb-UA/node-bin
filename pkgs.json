@@ -1,0 +1,42 @@
+{
+    "@repos": {
+        "node@10.16.3": {
+            "version": "10.16.3",
+            "format": "tar.xz",
+            "repo": "https://nodejs.org/download/release"
+        },
+        "node@10.16.3-win": {
+            "@inherit": "node@10.16.3",
+            "format": "7z"
+        }
+    },
+    "linux": {
+        "x64": "node@10.16.3",
+        "x86": {
+            "version": "10.16.1",
+            "format": "tar.xz",
+            "repo": "https://github.com/KaMeHb-UA/node-bin/releases/download"
+        },
+        "s390x": "node@10.16.3",
+        "ppc64le": "node@10.16.3",
+        "armv7l": "node@10.16.3",
+        "armv6l": "node@10.16.3",
+        "arm64": "node@10.16.3"
+    },
+    "darwin": {
+        "x64": "node@10.16.3"
+    },
+    "aix": {
+        "ppc64": {
+            "@inherit": "node@10.16.3",
+            "format": "tar.gz"
+        }
+    },
+    "sunos": {
+        "x64": "node@10.16.3"
+    },
+    "win": {
+        "x64": "node@10.16.3-win",
+        "x86": "node@10.16.3-win"
+    }
+}
