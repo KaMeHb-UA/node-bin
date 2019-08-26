@@ -21,6 +21,13 @@ for(var release in pkgs){
                 for(var arch in pkgs[release][major][minor][os]){
                     var repo = pkgs[release][major][minor][os][arch];
                     if(typeof repo === 'string'){
+                        const [ repoName, format ] = repo.split('@');
+                        if(!repos[repo]){
+                            repos[repo] = {
+                                '@inherit': repoName,
+                                format
+                            }
+                        }
                         repo = repos[repo];
                         pkgs[release][major][minor][os][arch] = repo;
                     }
