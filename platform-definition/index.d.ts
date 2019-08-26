@@ -21,10 +21,12 @@ type PlatformDefinition = {
 } | {
     os:   'darwin'
     arch: 'x64'
+        | 'x86'
 } | {
     os:   'win'
     arch: 'x64'
         | 'x86'
+        | 'arm64'
 } | {
     os:   'aix'
     arch: 'ppc64'
