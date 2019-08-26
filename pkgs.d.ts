@@ -9,7 +9,14 @@ declare const PackageDefinition: {
             [minor: number]: {
                 [os in Platform]: {
                     [arch in Arch]: {
-                        format: '7z' | 'tar.xz' | 'tar.gz' | 'zip'
+                        format: '7z'
+                            | 'tar.xz'
+                            | 'tar.gz'
+                            | 'zip'
+                            | 'msi'
+                            | 'pkg'
+                            | 'tar'
+                            | 'exe'
                         repo: string
                     }
                 }
