@@ -1,6 +1,6 @@
 {
     "name": "@marlock/node",
-    "version": "10.16",
+    "version": "0.11",
     "scripts": {
         "preinstall": "echo 1"
     },
