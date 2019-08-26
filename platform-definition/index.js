@@ -1,14 +1,9 @@
 module.exports = function(platform){
-    if(typeof process === 'undefined'){
-        // is your env a browser? hmm... looks like we may try to find suitable precompiled package for you too
-        var process = {
-            arch: 'wasm',
-            platform: 'js'
-        }
-    }
+    // is your env a browser? hmm... looks like we may try to find suitable precompiled package for you too
+    var browser = typeof process === 'undefined';
     if(!platform) platform = {};
-    if(!platform.arch) platform.arch = process.arch;
-    if(!platform.os) platform.os = process.platform;
+    if(!platform.arch) platform.arch = browser ? 'wasm' : process.arch;
+    if(!platform.os) platform.os = browser ? 'js' : process.platform;
 
     var arch = platform.os === 'aix' ? 'ppc64' : {
         'ia32': 'x86',
